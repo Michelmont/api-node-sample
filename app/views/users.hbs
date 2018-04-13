@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>help! shop - Inove nas suas ações de marketing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Bootstrap CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo bloginfo('template_url');?>/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo bloginfo('template_url');?>/assets/css/fonts.css" rel="stylesheet">
+    <link href="<?php echo bloginfo('template_url');?>/assets/css/no-auth.css" rel="stylesheet">
+    <link href="<?php echo bloginfo('template_url');?>/assets/css/customize.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.min.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
+<body>
+
+  <div class="login-box">
+      <div class="text-center logo">
+          <img src="<?php echo bloginfo('template_url');?>/assets/image/logo.png" class="" alt="Image">
+      </div>
+
+      <form class="woocommerce-form woocommerce-form-login login" method="post">
+          <p class="sub-content">Digite abaixo seu e-mail e senha já cadastrados na loja.</p>
+
+          <div class="form-group">
+              <!-- <label for="username" class="fonte_laranja"><?php //_e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label> -->
+              <label for="username" class="fonte_laranja font-size-16">Login</label>
+              <input type="text" class="form-control" name="username" id="username" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( $_POST['username'] ) : ''; ?>">
+          </div>
+
+          <div class="form-group">
+              <!-- <label for="password" class="fonte_laranja"><?php //_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label> -->
+              <label for="password" class="fonte_laranja font-size-16">Senha</label>
+              <input type="password" class="form-control" id="" name="password" id="password">
+
+              <p class="woocommerce-LostPassword lost_password pull-right">
+                  <a data-fancybox data-src="#lost-password-form" href="javascript:;">Esqueci minha senha.</a>
+              </p>
+          </div>
+
+
+          <p class="form-row">
+              <!-- <input type="submit" class="woocommerce-Button btn btn-verde btn-block btn-lg login-btn" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>" /> -->
+              <input type="submit" class="woocommerce-Button btn btn-verde btn-block btn-lg login-btn" name="login" value="Entrar" />
+              <label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline hidden">
+                  <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><?php _e( 'Remember me', 'woocommerce' ); ?></span>
+              </label>
+          </p>
+
+          <div class="divider" style="display:none">
+              <p class="fonte_laranja text-center">ou</p>
+          </div>
+
+          <p class="form-row" style="display:none">
+              <a href="<?php echo site_url('register'); ?>" class="btn btn-default btn-block btn-lg register-btn">Ainda não é cliente? Cadastre-se.</a>
+          </p>
+
+          <p class="copyright text-center">Copyright © 2017 Help. Todos os direitos reservados</p>
+      </form>
+  </div>
+
+  <div style="display: none;" id="lost-password-form" class="lost_reset_password">
+      <form method="post" class="woocommerce-ResetPassword lost_reset_password">
+          <br>
+
+          <p class="woocommerce-form-row woocommerce-form-row--first form-row form-row-first">
+              <div class="form-group">
+                  <label for="user_login" class="fonte_laranja font-size-16"><?php _e( 'Username or email', 'woocommerce' ); ?></label>
+                  <input class="form-control" type="text" name="user_login" id="user_login"/>
+              </div>
+          </p>
+
+          <div class="clear"></div>
+
+          <br>
+
+          <p class="woocommerce-form-row form-row">
+              <input type="hidden" name="wc_reset_password" value="true" />
+              <input type="submit" class="btn btn-default register-btn" value="<?php esc_attr_e( 'Reset password', 'woocommerce' ); ?>" />
+          </p>
+
+      </form>
+  </div>
+
+
+
+<script src="//code.jquery.com/jquery.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="<?php echo bloginfo('template_url');?>/assets/js/swiper.jquery.min.js"></script>
+<script src="<?php echo bloginfo('template_url');?>/assets/js/swiper.min.js"></script>
+
+</body>
+</html>
